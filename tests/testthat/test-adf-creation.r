@@ -15,6 +15,7 @@ context("adf creation")
 
 test_that("We can create an adf from text files.", {
   adfObj <- adf(c(tf,tf2))
+  print(adfObj)
   cc <- c("character", "integer", "numeric", "complex")
   names(cc) <- paste0("V", 1:4)
   expect_equal(cc, adfObj$colClasses)
