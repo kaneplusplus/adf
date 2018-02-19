@@ -33,7 +33,7 @@ test_that("We can perform linear regression with adf.apply.", {
   betaDF <- coef(lm(col3 ~ col2 + col1, data = test_df2))
   betaADF <- qr.solve(XtX, Xty)
   err <- max(abs(betaDF - betaADF))
-  expect_true( abs(err) < 1e-13 )
+  expect_true( abs(err) < 1e-10 )
 })
 
 unlink(tf)
