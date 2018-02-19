@@ -5,9 +5,9 @@
 #' data frame.
 #' @param x an abstract data frame
 #' @param FUN2 function to apply over each chunk of the abstract data frame
-#' @param param a list of additional parameters
-#' @importFrom foreach dopar foreach
-#' @importFrom iotools chunk.apply
+#' @param params a list of additional parameters
+#' @importFrom foreach %dopar% foreach
+#' @importFrom iotools chunk.apply chunk.reader
 #' @export
 default.apply.function <- function (x, FUN2, params) {
 

@@ -11,7 +11,7 @@ default.apply.function(x, FUN2, params)
 
 \item{FUN2}{function to apply over each chunk of the abstract data frame}
 
-\item{param}{a list of additional parameters}
+\item{params}{a list of additional parameters}
 }
 \description{
 Default method for applying a function to an abstract

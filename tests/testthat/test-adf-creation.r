@@ -18,7 +18,7 @@ test_that("We can create an adf from text files.", {
   cc <- c("character", "integer", "numeric", "complex")
   names(cc) <- paste0("V", 1:4)
   expect_equal(cc, adfObj$colClasses)
-  expect_equal(list(), adfObject$levels)
+  expect_equal(list(), adfObj$levels)
   expect_equal(0, adfObj$skip)
 })
 

@@ -1,4 +1,5 @@
 
+#' @importFrom utils type.convert
 evalHead <- function (createCon, chunkProcessor, sep, skip, header, strict,
                       colNames, nrowsClasses) {
     f <- eval(createCon)

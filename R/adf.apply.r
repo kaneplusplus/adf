@@ -9,7 +9,7 @@
 #'   argument accepts the args parameter
 #' @param args Option list of arguments which are passed as a second
 #'   argument to FUN
-#' @param outDir if ‘NULL’, the default, results are passed back to R;
+#' @param outDir if 'NULL', the default, results are passed back to R;
 #'   otherwise this gives the output location (a new directory)
 #'   for storing the results
 #' @param type type of data to give as an input to FUN. If model or sparse
@@ -60,6 +60,9 @@
 #' unlink(tf)
 #' unlink(tf2)
 #' @importFrom foreach getDoParName registerDoSEQ
+#' @importFrom Matrix sparse.model.matrix
+#' @importFrom stats model.frame model.matrix model.offset model.response
+#' @importFrom stats model.weights
 #' @export
 adf.apply <- function(x, FUN, args = list(), outDir = NULL,   
   type = c("data.frame", "model", "sparse.model"), formula = NULL, 
@@ -122,7 +125,7 @@ adf.apply <- function(x, FUN, args = list(), outDir = NULL,
     w <- as.vector(model.weights(mf))
     offset <- as.vector(model.offset(mf))
     if (type == "sparse.model") {
-      x <- Matrix::sparse.model.matrix(mt, mf, contrasts.arg = contrasts)
+      x <- sparse.model.matrix(mt, mf, contrasts.arg = contrasts)
     } else {
       x <- model.matrix(mt, mf, contrasts.arg = contrasts)
     }

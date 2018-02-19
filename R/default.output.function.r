@@ -6,7 +6,7 @@
 #' @param outDir an empty directory for storing output
 #' @param params a list of additional parameters
 #' @importFrom foreach foreach %dopar%
-#' @importFrom iotools chunk.apply as.output
+#' @importFrom iotools chunk.apply as.output chunk.reader
 #' @export
 default.output.function <- function (x, FUN2, outDir, params) {
 

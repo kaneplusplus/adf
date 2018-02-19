@@ -6,7 +6,7 @@
 #'   path to a file for file connections.
 #' @param conMethod string indicating the connection method.
 #' @param encoding encoding to use in the connections
-#' @param expand.path logical. Should ‘description’ be normalized and wildcard
+#' @param expand.path logical. Should 'description' be normalized and wildcard
 #'   expanded.
 #' @param colClasses an optional character vector of column classes. If named
 #'   and colNames is missing, the names will be used for colNames.
@@ -39,6 +39,7 @@
 #'   first file or connection if multiple are passed.
 #' @return An abstract data frame object.
 #' @examples
+#'
 #'     n <- 100
 #'     test_df <- data.frame(col1 = sample(state.abb,n,TRUE),
 #'                           col2 = sample(1:10,n,TRUE),
