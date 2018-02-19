@@ -17,4 +17,3 @@ default.apply.function(x, FUN2, params)
 Default method for applying a function to an abstract
 data frame.
 }
-
