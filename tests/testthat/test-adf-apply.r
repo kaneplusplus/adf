@@ -11,8 +11,13 @@ write.table(test_df, tf <- tempfile(), sep = "|",
 write.table(test_df, tf2 <- tempfile(), sep = "|",
              quote = FALSE, row.names = FALSE, col.names = FALSE)
 
-adfObj <- adf(c(tf,tf2))
-adfObj <- allFactorLevels(adfObj)
+adfObjOld <- adf(c(tf,tf2))
+
+adfObj <- allFactorLevels(adfObjOld)
+
+test_that("allFactorLevels is working.", {
+  expect_equal(adfObj, allFactorLevels(adfObjOld))
+})
 
 test_that("We can perform linear regression with adf.apply.", {
   # Construct OLS beta hat
