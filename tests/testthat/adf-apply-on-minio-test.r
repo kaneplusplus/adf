@@ -1,7 +1,7 @@
 # Note you have to use the fork at kaneplusplus/aws.s3 until my pull
 # request is merged.
-library(aws.s3)
-library(iotools)
+library('aws.s3')
+library('iotools')
 
 context("adf.apply on minio")
 
@@ -48,11 +48,8 @@ adfObjOld$createNewConnection[[1]] <-
 adfObjOld$createNewConnection[[2]] <- 
   parse(text="rawConnection(get_object('part-2', random_bucket))")
 
+Sys.sleep(1)
 adfObj <- allFactorLevels(adfObjOld)
-
-test_that("allFactorLevels is working.", {
-  expect_equal(adfObj, allFactorLevels(adfObjOld))
-})
 
 test_that("We can perform linear regression with adf.apply.", {
   # Construct OLS beta hat
