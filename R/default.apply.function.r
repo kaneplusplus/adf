@@ -8,7 +8,7 @@
 #' @param param a list of additional parameters
 #' @importFrom foreach dopar foreach
 #' @importFrom iotools chunk.apply
-#' @export 
+#' @export
 default.apply.function <- function (x, FUN2, params) {
 
     if (is.null(params$chunk.max.line)) {

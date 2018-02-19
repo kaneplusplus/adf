@@ -18,3 +18,4 @@ default.output.function(x, FUN2, outDir, params)
 \description{
 Default method for constructing output file to file system.
 }
+

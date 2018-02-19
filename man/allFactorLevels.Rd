@@ -12,3 +12,4 @@ allFactorLevels(x)
 \description{
 Get all factor levels of a (possibly abstract) data frame.
 }
+
