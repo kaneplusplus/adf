@@ -6,6 +6,8 @@ cache: packages
 r_packages:
   - covr
   - testthat
+r_github_packages:
+  - kaneplusplus/aws.s3
 after_success:
   - Rscript -e 'covr::codecov()'
 
