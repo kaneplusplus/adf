@@ -45,7 +45,6 @@ default.apply.function <- function (x, FUN2, params) {
         }
 
         cr <- chunk.reader(con, max.line = params$chunk.max.line)
-
         chunk.apply(cr, FUN2, CH.MERGE = params$CH.MERGE,
                     CH.MAX.SIZE = params$CH.MAX.SIZE, 
                     parallel = params$parallel)
